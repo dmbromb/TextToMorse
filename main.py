@@ -1,6 +1,7 @@
 import pandas as pd
 import lxml
 
+
 def text_to_morse(word, translation_dictionary):
     morse = ''
     for letter in word:
@@ -23,7 +24,7 @@ while keep_going:
     try:
         print(text_to_morse(word, dict))
     except:
-        print('Invalid string. Please enter letters only')
+        print('\nInvalid string. Please enter letters only')
     y_n = input('\nWould you like to translate another word? (y/n)\n')
     if y_n.upper() != 'Y':
         keep_going = False
