@@ -1,4 +1,5 @@
 import pandas as pd
+import lxml
 
 def text_to_morse(word, translation_dictionary):
     morse = ''
