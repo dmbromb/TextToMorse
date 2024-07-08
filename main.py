@@ -1,4 +1,5 @@
 import pandas as pd
+
 def text_to_morse(word, translation_dictionary):
     morse = ''
     for letter in word:
@@ -18,7 +19,10 @@ keep_going = True
 while keep_going:
     dict = df.to_dict()['Code']
     word = input('\nWhat word would you like to translate? \n')
-    print(text_to_morse(word, dict))
+    try:
+        print(text_to_morse(word, dict))
+    except:
+        print('Invalid string. Please enter letters only')
     y_n = input('\nWould you like to translate another word? (y/n)\n')
     if y_n.upper() != 'Y':
         keep_going = False
